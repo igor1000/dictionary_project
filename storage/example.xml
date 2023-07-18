@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <example1>
+        <name>Пример 1</name>
+        <sub_list>
+            <name>Пример 1</name>
+            <sub_list>
+                <name>Пример 1</name>
+            </sub_list>
+            <sub_list>
+                <name>Пример 2</name>
+            </sub_list>
+        </sub_list>
+        <sub_list>
+            <name>Пример 2</name>
+        </sub_list>
+        <sub_list>
+            <name>Пример 3</name>
+        </sub_list>
+    </example1>
+</root>

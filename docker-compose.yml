@@ -1,0 +1,43 @@
+version: '3'
+services:
+    nginx:
+        build:
+            context: ./docker
+            dockerfile: nginx.docker
+        volumes:
+            - ./project:/var/www
+        depends_on:
+            - php-fpm
+        ports:
+            - "8080:80"
+    php-fpm:
+        build:
+            context: ./docker
+            dockerfile: php-fpm.docker
+        volumes:
+            - ./project:/var/www
+        depends_on:
+            - mysql
+    php-cli:
+        build:
+            context: ./docker
+            dockerfile: php-cli.docker
+        volumes:
+            - ./project:/var/www
+            - composer:/root/.composer/cache
+        depends_on:
+            - mysql
+    mysql:
+        image: mysql:5.7
+        volumes:
+            - ./storage/docker/mysql:/var/lib/mysql
+        environment:
+            - "MYSQL_ROOT_PASSWORD=secret"
+            - "MYSQL_USER=app"
+            - "MYSQL_PASSWORD=secret"
+            - "MYSQL_DATABASE=project"
+        ports:
+            - "33061:3306"
+
+volumes:
+    composer:
