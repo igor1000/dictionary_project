@@ -1,0 +1,102 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Manager API",
+        "description": "HTTP JSON API",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "/"
+        }
+    ],
+    "paths": {
+        "/load": {
+            "get": {
+                "description": "Data load",
+                "operationId": "f1cc94b027656ffcb9c34a3cecac0081",
+                "responses": {
+                    "200": {
+                        "description": "Data loaded"
+                    }
+                }
+            }
+        },
+        "/add": {
+            "get": {
+                "description": "Add Item",
+                "operationId": "1e42f4df0e98a289689bc646faaa07b4",
+                "responses": {
+                    "200": {
+                        "description": "Item added"
+                    }
+                }
+            }
+        },
+        "/edit": {
+            "get": {
+                "description": "Edit Item",
+                "operationId": "e65a3bde03d72a6806dab76903d5eea3",
+                "responses": {
+                    "200": {
+                        "description": "Edit added"
+                    }
+                }
+            }
+        },
+        "/delete": {
+            "get": {
+                "description": "Delete Item",
+                "operationId": "83f4e2a589e8222e6a3bee28fa39833b",
+                "responses": {
+                    "200": {
+                        "description": "Item deleted"
+                    }
+                }
+            }
+        },
+        "/show-all": {
+            "get": {
+                "description": "Show all items",
+                "operationId": "6f0366e0d260c19174cf0335c4dc65f7",
+                "responses": {
+                    "200": {
+                        "description": "All dictionary items in tree"
+                    }
+                }
+            }
+        },
+        "/find-by-code/{code}": {
+            "get": {
+                "description": "List items",
+                "operationId": "0c6273b02e93e52bb627619037621db2",
+                "responses": {
+                    "200": {
+                        "description": "List items",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/find-by-name/{name}": {
+            "get": {
+                "description": "List items",
+                "operationId": "75015edbb9ba8c51af0d795edccda882",
+                "responses": {
+                    "200": {
+                        "description": "List items",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
